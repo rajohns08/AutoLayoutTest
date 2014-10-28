@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,68 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This view only has a label with constraints on the leading/top/trailing space to superview and it works as desred" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0R-Vc-c1h">
+                                <rect key="frame" x="16" y="20" width="568" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="B0R-Vc-c1h" secondAttribute="trailing" constant="16" id="340-TY-bBz"/>
+                            <constraint firstItem="B0R-Vc-c1h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="SCr-NH-n4E"/>
+                            <constraint firstItem="B0R-Vc-c1h" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="bDH-w2-iKP"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xMh-ki-kCH">
+            <objects>
+                <viewController id="fwU-1k-zzt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wSa-3T-F47"/>
+                        <viewControllerLayoutGuide type="bottom" id="cRP-cl-542"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0h7-6H-iJA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vgl-Wv-NCc">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKi-4D-kyi">
+                                        <rect key="frame" x="8" y="8" width="584" height="21"/>
+                                        <string key="text">This view contains a label inside a scrollview and contains constraints on every edge of the scrollview and constraints on every edge of the textview also. The label will not word wrap properly with constraints!!</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="jKi-4D-kyi" firstAttribute="leading" secondItem="vgl-Wv-NCc" secondAttribute="leading" constant="8" id="BXQ-GJ-NAU"/>
+                                    <constraint firstItem="jKi-4D-kyi" firstAttribute="top" secondItem="vgl-Wv-NCc" secondAttribute="top" constant="8" id="fRa-3a-jVw"/>
+                                    <constraint firstAttribute="trailing" secondItem="jKi-4D-kyi" secondAttribute="trailing" constant="8" id="ot9-Nb-B1X"/>
+                                    <constraint firstAttribute="bottom" secondItem="jKi-4D-kyi" secondAttribute="bottom" constant="571" id="sXV-5E-so2"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vgl-Wv-NCc" secondAttribute="trailing" id="0W0-dH-bUG"/>
+                            <constraint firstItem="cRP-cl-542" firstAttribute="top" secondItem="vgl-Wv-NCc" secondAttribute="bottom" id="6pW-EH-jDq"/>
+                            <constraint firstItem="vgl-Wv-NCc" firstAttribute="leading" secondItem="0h7-6H-iJA" secondAttribute="leading" id="Kye-EX-s0J"/>
+                            <constraint firstItem="vgl-Wv-NCc" firstAttribute="top" secondItem="0h7-6H-iJA" secondAttribute="top" id="Yyn-gW-xhM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DBJ-D2-F7t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1666" y="653"/>
         </scene>
     </scenes>
 </document>
